@@ -1,0 +1,12 @@
+--- makefiles/cmake/vmcs.cmake.old	2015-02-21 14:31:57.608527445 +0100
++++ makefiles/cmake/vmcs.cmake	2015-02-21 14:32:09.358363958 +0100
+@@ -10,7 +10,7 @@
+ if (ANDROID)
+   SET(VMCS_INSTALL_PREFIX "/vendor/brcm/islands" CACHE PATH "Prefix prepended to install directories" FORCE)
+ else()
+-  SET(VMCS_INSTALL_PREFIX "/opt/vc" CACHE PATH "Prefix prepended to install directories" FORCE)
++  SET(VMCS_INSTALL_PREFIX "/usr" CACHE PATH "Prefix prepended to install directories" FORCE)
+ endif()
+ 
+ SET(CMAKE_INSTALL_PREFIX "${VMCS_INSTALL_PREFIX}" CACHE INTERNAL "Prefix
+

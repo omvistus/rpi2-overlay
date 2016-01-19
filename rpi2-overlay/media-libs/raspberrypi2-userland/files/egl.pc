@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: EGL
+Description: Fake EGL package for Gentoo on RPi2
+Version: 10
+Requires: bcm_host
+Libs: -L${libdir} -lEGL
+Cflags: -I${includedir}
+
+

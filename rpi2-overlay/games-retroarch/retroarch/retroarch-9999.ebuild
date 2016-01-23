@@ -21,15 +21,13 @@ KEYWORDS="~arm"
 # To avoid fatal dependency failures for users enabling the "python" USE flag, a
 # default "python_single_target_python*" USE flag *MUST* be set below to the
 # default version of Python 3 for default Portage profiles.
-IUSE="assets cores database joypad_autoconfig +cpu_flags_arm_neon shaders overlays python_single_target_python3_3 +python_single_target_python3_4"
+IUSE="assets database joypad_autoconfig +cpu_flags_arm_neon overlays python_single_target_python3_3 +python_single_target_python3_4"
 
 RDEPEND="
-	assets? ( games-emulation/retroarch-assets )
-	cores? ( games-emulation/libretro-meta )
-	database? ( games-emulation/libretro-database )
-	joypad_autoconfig? ( games-emulation/retroarch-joypad-autoconfig )
+	assets? ( games-retroarch/retroarch-assets )
+	database? ( games-retroarch/libretro-database )
+	joypad_autoconfig? ( games-retroarch/retroarch-joypad-autoconfig )
 	=media-libs/libsdl2-2.0.3-r999[alsa,joystick]
-	shaders? ( games-emulation/common-shaders )
 	dev-libs/libxml2
 	sys-libs/zlib
 	"

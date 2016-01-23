@@ -24,9 +24,9 @@ KEYWORDS="~arm"
 IUSE="assets database joypad_autoconfig +cpu_flags_arm_neon overlays python_single_target_python3_3 +python_single_target_python3_4"
 
 RDEPEND="
-	assets? ( games-retroarch/retroarch-assets )
-	database? ( games-retroarch/libretro-database )
-	joypad_autoconfig? ( games-retroarch/retroarch-joypad-autoconfig )
+	assets? ( retroarch-base/retroarch-assets )
+	database? ( retroarch-base/libretro-database )
+	joypad_autoconfig? ( retroarch-base/retroarch-joypad-autoconfig )
 	=media-libs/libsdl2-2.0.3-r999[alsa,joystick]
 	dev-libs/libxml2
 	sys-libs/zlib

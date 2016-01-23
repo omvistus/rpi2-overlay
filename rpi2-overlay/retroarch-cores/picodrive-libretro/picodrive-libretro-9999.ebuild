@@ -29,12 +29,15 @@ src_unpack() {
 	git-r3_checkout
 }
 
+src_prepare() {
+	epatch ${FILESDIR}/picodrive-rpi2.patch
+}
 src_configure() {
 	./configure
 }
 
 src_compile() {
-	make -f Makefile.libretro platform=armv6 || die "emake failed!"
+	make -f Makefile.libretro platform=rpi2 || die "emake failed!"
 }
 
 src_install() {

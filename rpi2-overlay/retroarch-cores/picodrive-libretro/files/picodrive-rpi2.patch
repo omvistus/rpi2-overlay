@@ -1,0 +1,37 @@
+--- a/Makefile.libretro	2016-01-23 06:12:38.315335641 -0700
++++ b/Makefile.libretro	2016-01-23 06:14:43.970796675 -0700
+@@ -256,6 +256,34 @@
+    use_sh2drc = 1
+    use_svpdrc = 1
+ 
++# Raspberry Pi 2
++else ifeq ($(platform), rpi2)
++   CFLAGS += -marm -mfpu=neon-vfpv4 -mfloat-abi=hard -march=armv7-a -mtune=cortex-a7
++   CFLAGS += -Wall -mword-relocations
++   CFLAGS += -fomit-frame-pointer -ffast-math
++   ARCH = arm
++   ARM_ASM = 1
++
++   TARGET := $(TARGET_NAME)_libretro.so
++   SHARED := -shared -nostdlib
++   fpic := -fPIC
++   DONT_COMPILE_IN_ZLIB = 1
++
++   asm_memory = 1
++   asm_render = 1
++   asm_ym2612 = 1
++   asm_misc = 1
++   asm_cdpico = 1
++   asm_cdmemory = 1
++   asm_mix = 1
++
++   use_cyclone = 1
++   use_fame = 0
++   use_drz80 = 1
++   use_cz80 = 0
++   use_sh2drc = 1
++   use_svpdrc = 1
++
+ # Vita
+ else ifeq ($(platform), vita)
+ 	TARGET := $(TARGET_NAME)_libretro_vita.a

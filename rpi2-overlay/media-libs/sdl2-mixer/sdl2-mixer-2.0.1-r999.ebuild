@@ -27,7 +27,7 @@ REQUIRED_USE="
 	tremor? ( vorbis )
 	"
 
-RDEPEND="=media-libs/libsdl2-2.0.3-r999[${MULTILIB_USEDEP}]
+RDEPEND="=media-libs/libsdl2-2.0.4-r999[${MULTILIB_USEDEP}]
 	flac? ( >=media-libs/flac-1.2.1-r5[${MULTILIB_USEDEP}] )
 	midi? (
 		fluidsynth? ( >=media-sound/fluidsynth-1.1.6-r1[${MULTILIB_USEDEP}] )

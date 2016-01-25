@@ -27,7 +27,7 @@ RDEPEND="
 	assets? ( retroarch-base/retroarch-assets )
 	database? ( retroarch-base/libretro-database )
 	joypad_autoconfig? ( retroarch-base/retroarch-joypad-autoconfig )
-	=media-libs/libsdl2-2.0.3-r999[alsa,joystick]
+	=media-libs/libsdl2-2.0.4-r999
 	dev-libs/libxml2
 	sys-libs/zlib
 	"
@@ -71,7 +71,13 @@ src_configure() {
 		--disable-pulse \
 		--disable-oss   \
 		--disable-al \
+		--enable-gles \
 		--enable-floathard \
+		--enable-dispmanx \
+		--disable-ffmpeg \
+		--disable-sdl \
+		--enable-sdl2 \
+		--disable-jack \
 		--enable-materialui \
 		$(use_enable cpu_flags_arm_neon neon) \
 	|| die

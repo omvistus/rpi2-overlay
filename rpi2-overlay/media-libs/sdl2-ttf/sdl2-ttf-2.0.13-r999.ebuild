@@ -16,7 +16,7 @@ KEYWORDS="~arm"
 IUSE="static-libs X"
 
 RDEPEND="X? ( >=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}] )
-	=media-libs/libsdl2-2.0.3-r999[${MULTILIB_USEDEP}]
+	=media-libs/libsdl2-2.0.4-r999[${MULTILIB_USEDEP}]
 	>=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}]"
 DEPEND=${RDEPEND}
 

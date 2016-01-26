@@ -30,7 +30,7 @@ RDEPEND="
 	ncurses? ( sys-libs/ncurses:5= )
 	nls? ( sys-devel/gettext:0=[nls] )
 	sdl? (
-		=media-libs/libsdl2-2.0.3-r999
+		=media-libs/libsdl2-2.0.4-r999
 		=media-libs/sdl2-ttf-2.0.13-r999
 		=media-libs/sdl2-image-2.0.1-r999[jpeg,png]
 		media-libs/freetype:2=

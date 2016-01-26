@@ -35,13 +35,19 @@ src_configure() {
 
 	# sorted by `./configure --help`
 	ECONF_SOURCE="${S}" econf   \
-		--disable-pulseaudio    \
-		--disable-esd           \
-		--disable-video-mir     \
-		--disable-video-wayland \
-		--disable-video-x11     \
-		--disable-video-opengl  \
-		--host=armv7l-raspberry-linux-gnueabihf
+		--host=armv7l-raspberry-linux-gnueabihf \
+		--enable-sdl-dlopen \
+	    --disable-arts --disable-esd --disable-nas \
+	    --enable-alsa \
+	    --disable-pulseaudio \
+	    --disable-video-wayland \
+	    --without-x --disable-video-x11 --disable-x11-shared \
+	    --disable-video-x11-xcursor --disable-video-x11-xinerama \
+	    --disable-video-x11-xinput --disable-video-x11-xrandr \
+	    --disable-video-x11-scrnsaver --disable-video-x11-xshape \
+	    --disable-video-x11-vm --disable-video-opengl \
+	    --disable-video-directfb --disable-rpath \
+	    --enable-video-opengles
 }
 
 src_install() {

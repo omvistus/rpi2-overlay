@@ -42,9 +42,6 @@ src_install() {
 	mv "${D}"/usr/include/interface/vcos/pthreads/* \
 		"${D}"/usr/include/interface/vcos/
 	rmdir "${D}"/usr/include/interface/vcos/pthreads
-	mv "${D}"/usr/include/interface/vmcs_host/linux/* \
-		"${D}"/usr/include/interface/vmcs_host/
-	rmdir "${D}"/usr/include/interface/vmcs_host/linux
 
 	dodir /usr/share/doc/${PF}
 	mv "${D}"/usr/src/hello_pi "${D}"/usr/share/doc/${PF}/

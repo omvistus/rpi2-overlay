@@ -1,0 +1,14 @@
+--- a/src/configure	2016-01-28 01:08:35.405285412 -0700
++++ b/src/configure	2016-01-28 01:12:29.025285323 -0700
+@@ -2500,9 +2500,8 @@
+     LDFLAGS="$LDFLAGS -L${PS2SDK}/ports/lib"
+ fi
+ if [ "$a8_target" = "rpi" ]; then
+-    CC="${RPI_SDK}/bin/arm-linux-gnueabihf-gcc"
+-    CFLAGS="$CFLAGS -I${RPI_SDK}/include -I${RPI_SDK}/include/SDL -I${RPI_SDK}/include/interface/vmcs_host/linux -I${RPI_SDK}/include/interface/vcos/pthreads"
+-    LDFLAGS="$LDFLAGS -Wl,--unresolved-symbols=ignore-in-shared-libs -L${RPI_SDK}/lib"
++    CFLAGS="$CFLAGS -I/opt/vc/include -I/opt/vc/include/SDL -I/opt/vc/include/interface/vmcs_host/linux -I/opt/vc/include/interface/vcos/pthreads"
++    LDFLAGS="$LDFLAGS -Wl,--unresolved-symbols=ignore-in-shared-libs -L/opt/vc/lib"
+ fi
+ if [ "$a8_target" = "android" ]; then
+ 	CC="arm-eabi-gcc"

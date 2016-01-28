@@ -10,17 +10,15 @@ DESCRIPTION="libretro implementation of FCEUmm/FCEUX. (Nintendo Entertainment Sy
 HOMEPAGE="https://github.com/libretro/fceu-next"
 SRC_URI=""
 
-EGIT_REPO_URI="https://github.com/libretro/fceu-next.git"
+EGIT_REPO_URI="https://github.com/libretro/libretro-fceumm.git"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~arm"
 IUSE=""
 
 RDEPEND=""
 DEPEND=""
-
-S="${S}/fceumm-code"
 
 src_unpack() {
 	git-r3_fetch https://github.com/libretro/libretro-super.git HEAD

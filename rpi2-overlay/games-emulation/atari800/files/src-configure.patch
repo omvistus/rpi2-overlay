@@ -12,3 +12,21 @@
  fi
  if [ "$a8_target" = "android" ]; then
  	CC="arm-eabi-gcc"
+--- a/src/platform.h	2016-01-28 01:21:47.805285110 -0700
++++ b/src/platform.h	2016-01-28 01:22:28.905285094 -0700
+@@ -94,7 +94,6 @@
+ 
+ #endif /* SUPPORTS_CHANGE_VIDEOMODE */
+ 
+-#ifdef PLATFORM_MAP_PALETTE
+ typedef struct PLATFORM_pixel_format_t {
+ 	int bpp; /* Current bits per pixel */
+ 	ULONG rmask;
+@@ -108,7 +107,6 @@
+ /* Convert a table of RGB values, PALETTE, of size SIZE, to a display's native
+    format and store it in the lookup table DEST. */
+ void PLATFORM_MapRGB(void *dest, int const *palette, int size);
+-#endif /* PLATFORM_MAP_PALETTE */
+ 
+ #if defined(SOUND) && defined(SOUND_THIN_API)
+ /* PLATFORM_SoundSetup opens the hardware sound output with parameters
